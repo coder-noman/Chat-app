@@ -21,13 +21,14 @@ export const signup = async (req, res) => {
         const hashedPassword = await bcrypt.hash(password,salt)
 
         // Profile picture making
-        const profilePic = `https://ui-avatars.com/api/name=${username}/?background=0D8ABC&color=fff`;
+		const boyProfilePic = `https://avatar.iran.liara.run/public/boy?username=${username}`;
+		const girlProfilePic = `https://avatar.iran.liara.run/public/girl?username=${username}`;
         const newUser = new User({
 			fullName,
 			username,
 			password: hashedPassword,
 			gender,
-			profilePic: profilePic,
+			profilePic: gender === "male" ? boyProfilePic : girlProfilePic,
 		});
         if (newUser) {
 			// Generate JWT token here

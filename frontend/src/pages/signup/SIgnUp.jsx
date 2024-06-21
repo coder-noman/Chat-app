@@ -23,16 +23,16 @@ const SIgnUp = () => {
 	await signup(inputs);
 };
   return (
-    <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
-      <div className="w-full p-6 rounded-lg shadow-md bg-purple-800 border border-black">
-        <h1 className="text-3xl font-semibold text-center text-gray-300">
-          Sign Up <span className="text-blue-500"> ChatApp</span>
+    <div className="flex flex-col items-center justify-center md:min-w-96 mx-auto">
+      <div className="w-full p-6 rounded-lg shadow-md  bg-purple-700 border-2 border-black ">
+        <h1 className="text-3xl font-semibold text-center text-white border-b pb-4">
+          Register
         </h1>
 
         <form onSubmit={handleSubmit}>
           <div>
             <label className="label p-2">
-              <span className="text-base label-text">Full Name</span>
+              <span className="text-base label-text text-white">Full Name</span>
             </label>
             <input
               type="text"
@@ -47,7 +47,7 @@ const SIgnUp = () => {
 
           <div>
             <label className="label p-2 ">
-              <span className="text-base label-text">Username</span>
+              <span className="text-base label-text text-white">Username</span>
             </label>
             <input
               type="text"
@@ -62,7 +62,7 @@ const SIgnUp = () => {
 
           <div>
             <label className="label">
-              <span className="text-base label-text">Password</span>
+              <span className="text-base label-text text-white">Password</span>
             </label>
             <input
               type="password"
@@ -77,7 +77,7 @@ const SIgnUp = () => {
 
           <div>
             <label className="label">
-              <span className="text-base label-text">Confirm Password</span>
+              <span className="text-base label-text text-white">Confirm Password</span>
             </label>
             <input
               type="password"
@@ -93,15 +93,15 @@ const SIgnUp = () => {
           <GenderCheckbox onCheckboxChange={handleCheckboxChange} selectedGender={inputs.gender}/>
 
           <Link
-            className="text-sm hover:underline text-white hover:text-blue-600 mt-2 inline-block"
+            className="text-sm block text-center hover:underline text-white hover:text-blue-600 mt-2 "
             to="/login"
           >
             Already have an account?
           </Link>
 
-          <div>
-            <button className="btn btn-block btn-sm mt-2 border border-slate-700"disabled={loading}>
-							{loading ? <span className='loading loading-spinner'></span> : "Sign Up"}
+          <div className="text-center">
+            <button className="btn btn-block sm:w-20 md:w-28 md:text-xl mt-2 font-bold"disabled={loading}>
+							{loading ? <span className='loading loading-spinner'></span> : "Register"}
             </button>
           </div>
         </form>

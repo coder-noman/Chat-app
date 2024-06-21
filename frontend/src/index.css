@@ -2,11 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-	background: rgba(128, 0, 128, 0.486);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+body{
+	background: rgba(128, 0, 128, 0.377);
+	min-height: 100vh;
+	display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* dark mode looking scrollbar */
 ::-webkit-scrollbar {
